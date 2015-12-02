@@ -1,4 +1,4 @@
-package main
+package compute_pi
 
 import (
 	"flag"
@@ -29,7 +29,7 @@ func compute(totalTimes int, c chan int) {
 	c <- inside
 }
 
-func main() {
+func ComputePi() {
 	flag.Parse()
 	var numCPU = runtime.NumCPU()
 	totalInside := 0
